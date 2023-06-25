@@ -1,0 +1,255 @@
+body {
+    margin: 0;
+    padding: 0;
+    font: 14px/1.4em Arial, sans-serif;
+    color: black;
+}
+a, a:focus, a:visited, a:active {
+    text-decoration: none;
+    color: blue;
+}
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.container::after,
+.container::before {
+    content: '';
+    display: block;
+    clear: both;
+}
+.thumb {
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    line-height: 0;
+}
+
+.header-line {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px 0;
+    font-size: 1.3em;
+}
+.header-line span {
+    margin-right: 20px;
+}
+.header-line a {
+    color: #e07b7b;
+}
+
+.banners {
+    display: flex;
+}
+.banner {
+    height: 450px;
+    overflow: hidden;
+    border-radius: 8px;
+    width: 100%;
+}
+.banner img {
+    object-position: top;
+}
+.show-sale .banner {
+    width: 67%;
+}
+.show-sale .sale-wrapper {
+    width: 33%;
+}
+
+.sale-wrapper {
+    padding-left: 30px;
+}
+.sale {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 100%;
+}
+.sale .notion {
+    color: #e07b7b;
+    font-size: 1.8em;
+}
+.sale .name {
+    font-size: 1.5em;
+}
+.sale .price {
+    font-size: 1.5em;
+    color: #197a19;
+}
+.timer-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.timer-wrapper .timer-title {
+    font-size: 1.3em;
+}
+.timer-wrapper #timer {
+    font-size: 1.7em;
+    color: #e07b7b;
+    padding: 5px 0;
+}
+
+.services {
+    padding: 30px 0 0;
+}
+.services .items {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    align-items: stretch;
+}
+.services .item-wrapper {
+    width: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 30px;
+}
+.services .item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.services .item .labels {
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+.services .item .labels span {
+    background-color: #a15353;
+    padding: 2px 3px;
+    color: #fff;
+}
+.services .item .thumb {
+    height: 175px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+.services .item .name {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.services .item .price-block {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.services .item .price-block .session {
+    font-weight: 600;
+}
+.services .item .price-block .price {
+    text-align: right;
+}
+.services .item .price-block .old-price {
+    color: #858585;
+    text-decoration: line-through;
+    font-size: 0.8em;
+}
+.services .item .price-block .current-price {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.about .thumb {
+    float: left;
+    width: 400px;
+}
+.about .preview {
+    padding-left: 430px;
+    font-size: 1.2em;
+}
+
+footer {
+    padding: 30px 0;
+}
+footer::before {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+form {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    max-width: 300px;
+}
+form label {
+    display: block;
+    margin-bottom: 20px;
+}
+form label div {
+    margin-bottom: 10px;
+}
+form input[type=text], form input[type=password], form input[type=date] {
+    width: 300px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 3px 17px;
+    font-size: 1.1em;
+}
+form input[type=submit] {
+    height: 40px;
+    width: 300px;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    background-color: #007bff;
+}
+form input[type=submit]:hover {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+    cursor: pointer;
+}
+
+.error-msg {
+    color: red;
+    padding: 10px 0;
+}
+.success-msg {
+    color: green;
+    padding: 10px 0;
+}
+
+.modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,.3);
+}
+.modal {
+    width: 340px;
+    padding: 20px 20px 0;
+    border-radius: 8px;
+    background-color: #fff;
+}
+.modal .title {
+    font-size: 1.7em;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
